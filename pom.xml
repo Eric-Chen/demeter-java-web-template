@@ -87,6 +87,10 @@
           <groupId>org.freemarker</groupId>
           <artifactId>freemarker</artifactId>
       </dependency>
+      <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+      </dependency>
   </dependencies>
   <build>
     <finalName>demeter</finalName>
@@ -126,6 +130,11 @@
                 <groupId>org.freemarker</groupId>
                 <artifactId>freemarker</artifactId>
                 <version>2.3.22</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>18.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
