@@ -10,8 +10,12 @@
         <module>demeter-web</module>
         <module>demeter-framework</module>
     </modules>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
     <name>demeter Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+    <url>http://maven.apache.org</url>
     <dependencyManagement>
         <dependencies>
             <dependency>

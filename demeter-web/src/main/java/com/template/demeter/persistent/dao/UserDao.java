@@ -10,8 +10,10 @@ import java.util.Map;
  */
 public interface UserDao {
 
-    public User getUser(int id);
+    User selectOne(Map<String, Object> params);
 
-    public List<User> getSomeUsers(Map<String, Object> params);
+    List<User> selectUsers(Map<String, Object> params);
+
+
 
 }
