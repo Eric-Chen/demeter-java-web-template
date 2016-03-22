@@ -12,7 +12,7 @@
 
     <mvc:annotation-driven />
     <mvc:freemarker-configurer>
-        <mvc:template-loader-path location="/WEB-INF/views/" />
+        <mvc:template-loader-path location="/WEB-INF/views/*" />
     </mvc:freemarker-configurer>
     <mvc:view-resolvers>
         <mvc:freemarker suffix=".ftl" cache-views="true"/>

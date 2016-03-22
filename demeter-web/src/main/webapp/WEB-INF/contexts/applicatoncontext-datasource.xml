@@ -55,14 +55,22 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="mainDataSource" />
         <property name="mapperLocations" value="classpath*:persistent/mappers/*.xml" />
+        <property name="configLocation" value="classpath:/mybatis-config.xml" />
+        <property name="plugins">
+            <list value-type="org.apache.ibatis.plugin.Interceptor">
+                <bean class="com.github.pagehelper.PageHelper">
+                    <property name="properties">
+                        <props>
+                            <prop key="rowBoundsWithCount">true</prop>
+                        </props>
+                    </property>
+                </bean>
+            </list>
+        </property>
     </bean>
 
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg index="0" ref="sqlSessionFactory" />
     </bean>
-
-
-
-
 
 </beans>
