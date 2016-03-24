@@ -9,6 +9,7 @@
         <module>demeter-common</module>
         <module>demeter-web</module>
         <module>demeter-framework</module>
+        <module>demeter-tools</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
