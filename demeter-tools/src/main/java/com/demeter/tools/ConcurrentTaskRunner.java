@@ -1,4 +1,4 @@
-package com.template.tools;
+package com.demeter.tools;
 
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.DisposableBean;

@@ -1,8 +1,8 @@
-package com.template.demeter.users.impl;
+package com.demeter.users.impl;
 
-import com.template.demeter.persistent.dao.UserDao;
-import com.template.demeter.persistent.models.User;
-import com.template.demeter.users.UserService;
+import com.demeter.persistent.dao.UserDao;
+import com.demeter.persistent.models.User;
+import com.demeter.users.UserService;
 
 import java.util.List;
 

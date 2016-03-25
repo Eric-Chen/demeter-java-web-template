@@ -1,4 +1,4 @@
-package com.template.demeter.persistent.models;
+package com.demeter.persistent.models;
 
 /**
  * Created by eric on 15/5/21.

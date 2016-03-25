@@ -7,7 +7,7 @@
         <property name="sqlSession" ref="sqlSession" />
     </bean>
 
-    <bean id="userService" class="com.template.demeter.users.impl.UserServiceImpl">
+    <bean id="userService" class="com.demeter.users.impl.UserServiceImpl">
               <property name="userDao" ref="userDao"/>
        </bean>
 

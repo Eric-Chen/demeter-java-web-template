@@ -1,4 +1,4 @@
-package com.template.module;
+package com.demeter.module;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.InitializingBean;

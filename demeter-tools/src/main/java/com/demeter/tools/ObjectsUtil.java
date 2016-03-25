@@ -1,4 +1,4 @@
-package com.template.tools;
+package com.demeter.tools;
 
 /**
  * Created by eric on 3/24/16.
@@ -6,5 +6,6 @@ package com.template.tools;
 public final class ObjectsUtil {
 
     private ObjectsUtil(){}
+
 
 }

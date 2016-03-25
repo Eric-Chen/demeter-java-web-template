@@ -1,6 +1,6 @@
-package com.template.demeter.users;
+package com.demeter.users;
 
-import com.template.demeter.persistent.models.User;
+import com.demeter.persistent.models.User;
 
 import java.util.List;
 

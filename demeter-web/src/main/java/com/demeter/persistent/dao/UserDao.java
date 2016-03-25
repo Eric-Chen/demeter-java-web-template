@@ -1,6 +1,6 @@
-package com.template.demeter.persistent.dao;
+package com.demeter.persistent.dao;
 
-import com.template.demeter.persistent.models.User;
+import com.demeter.persistent.models.User;
 
 import java.util.List;
 import java.util.Map;

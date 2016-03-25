@@ -1,7 +1,7 @@
-package com.template.demeter.web.controllers;
+package com.demeter.web.controllers;
 
-import com.template.demeter.persistent.models.User;
-import com.template.demeter.users.UserService;
+import com.demeter.persistent.models.User;
+import com.demeter.users.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
