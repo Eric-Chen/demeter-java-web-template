@@ -1,7 +1,7 @@
-package com.demeter.module.oplog;
+package com.demeter.models.oplog;
 
 
-import com.demeter.module.BasicModel;
+import com.demeter.models.BasicModel;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

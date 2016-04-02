@@ -1,4 +1,4 @@
-package com.demeter.framework.aop.validation;
+package com.demeter.framework.spring.aop.validation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

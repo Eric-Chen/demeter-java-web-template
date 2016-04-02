@@ -10,7 +10,7 @@
         values(operation_log_seq.nextval, #{uid}, #{username}, #{module}, #{operation}, #{changeData}, SYSTIMESTAMP, SYSTIMESTAMP)
     </insert>
 
-    <select id="queryLogs" parameterType="com.demeter.module.oplog.Oplog" resultType="com.demeter.module.oplog.Oplog">
+    <select id="queryLogs" parameterType="com.demeter.module.oplog.OplogService.QueryRequest" resultType="com.demeter.module.oplog.Oplog">
         select * from operation_log
         <where>
             <if test="uid != null and uid > 0">

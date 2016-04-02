@@ -7,9 +7,9 @@
 
     <aop:aspectj-autoproxy proxy-target-class="true" />
 
-    <bean class="com.demeter.framework.aop.performance.PerformanceAspect"/>
+    <bean class="com.demeter.framework.spring.aop.performance.PerformanceAspect"/>
 
-    <bean class="com.demeter.framework.aop.validation.ValidationAspect" />
+    <bean class="com.demeter.framework.spring.aop.validation.ValidationAspect" />
 
 
 </beans>

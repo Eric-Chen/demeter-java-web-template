@@ -1,4 +1,4 @@
-package com.demeter.framework.aop.validation;
+package com.demeter.framework.spring.aop.validation;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

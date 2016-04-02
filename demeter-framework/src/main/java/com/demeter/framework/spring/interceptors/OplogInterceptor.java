@@ -1,4 +1,4 @@
-package com.demeter.framework.interceptors;
+package com.demeter.framework.spring.interceptors;
 
 import com.demeter.tools.OplogTracker;
 import org.springframework.web.servlet.ModelAndView;
