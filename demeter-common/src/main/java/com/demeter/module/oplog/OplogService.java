@@ -7,6 +7,6 @@ import com.demeter.module.BasicService;
  */
 public class OplogService extends BasicService<OplogDao> {
 
-
+    
 
 }
