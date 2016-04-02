@@ -6,7 +6,7 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>demeter-common</module>
+        <module>demeter-domain</module>
         <module>demeter-web</module>
         <module>demeter-framework</module>
         <module>demeter-tools</module>
