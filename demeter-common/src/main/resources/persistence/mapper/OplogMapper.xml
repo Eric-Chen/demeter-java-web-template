@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demeter.module.oplog.OplogDao">
+
+    <insert id="createLog" parameterType="com.demeter.module.oplog.Oplog">
+        <selectKey resultType="int" order="AFTER" keyProperty="id">
+            select operation_log_seq.currval from dual
+        </selectKey>
+        insert into operation_log(id, uid, username, module, operation, changeData, created, updated)
+        values(operation_log_seq.nextval, #{uid}, #{username}, #{module}, #{operation}, #{changeData}, SYSTIMESTAMP, SYSTIMESTAMP)
+    </insert>
+
+    <select id="queryLogs" parameterType="com.demeter.module.oplog.Oplog" resultType="com.demeter.module.oplog.Oplog">
+        select * from operation_log
+        <where>
+            <if test="uid != null and uid > 0">
+                uid = #{uid}
+            </if>
+            <if test="username != null">
+                and username like CONCAT(#{username}, '%')
+            </if>
+            <if test="updatedStart != null">
+                <![CDATA[ and updated > #{updatedStart} ]]>
+            </if>
+            <if test="updatedEnd != null">
+                <![CDATA[ and updated < #{updatedEnd} ]]>
+            </if>
+        </where>
+    </select>
+
+</mapper>

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.demeter.persistent.dao.UserDao">
+<mapper namespace="com.demeter.persistence.dao.UserDao">
     <resultMap id="user" type="com.demeter.persistent.models.User"/>
     <select id="selectOne" parameterType="map" resultMap="user">
         select * from USER where id = #{id}

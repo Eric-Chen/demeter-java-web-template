@@ -50,11 +50,11 @@
         </tx:attributes>
     </tx:advice>
 
-    <mybatis:scan base-package="com.template.demeter.persistent.mappers"/>
+    <mybatis:scan base-package="com.template.demeter.persistence.mappers"/>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="mainDataSource" />
-        <property name="mapperLocations" value="classpath*:persistent/mappers/*.xml" />
+        <property name="mapperLocations" value="classpath*:persistence/mappers/*.xml" />
         <property name="configLocation" value="classpath:/mybatis-config.xml" />
         <property name="plugins">
             <list value-type="org.apache.ibatis.plugin.Interceptor">
