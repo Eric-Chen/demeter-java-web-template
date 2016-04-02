@@ -37,7 +37,7 @@
 
     <aop:config>
         <aop:pointcut id="serviceTxMethods"
-                      expression="execution(* com.template.demeter.*Service.*(..))"/>
+                      expression="execution(* com.demeter.module..*Service.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceTxMethods"/>
     </aop:config>
 
@@ -46,6 +46,10 @@
             <tx:method name="update*" propagation="REQUIRED"/>
             <tx:method name="insert*" propagation="REQUIRED" />
             <tx:method name="delete*" propagation="REQUIRED" />
+            <tx:method name="remove*" propagation="REQUIRED"/>
+            <tx:method name="cancel*" propagation="REQUIRED" />
+            <tx:method name="add*" propagation="REQUIRED" />
+            <tx:method name="modify*" propagation="REQUIRED" />
             <tx:method name="*" propagation="SUPPORTS" read-only="true"/>
         </tx:attributes>
     </tx:advice>
@@ -54,8 +58,8 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="mainDataSource" />
-        <property name="mapperLocations" value="classpath*:persistence/mappers/*.xml" />
-        <property name="configLocation" value="classpath:/mybatis-config.xml" />
+        <property name="mapperLocations" value="classpath*:/persistence/mapper/*.xml" />
+        <property name="configLocation" value="classpath*:/mybatis-config.xml" />
         <property name="plugins">
             <list value-type="org.apache.ibatis.plugin.Interceptor">
                 <bean class="com.github.pagehelper.PageHelper">
