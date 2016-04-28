@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.demeter.module.oplog.OplogDao">
 
-    <insert id="createLog" parameterType="com.demeter.module.oplog.Oplog">
+    <insert id="createLog" parameterType="com.demeter.models.oplog.Oplog">
         <selectKey resultType="int" order="AFTER" keyProperty="id">
             select operation_log_seq.currval from dual
         </selectKey>
@@ -10,7 +10,7 @@
         values(operation_log_seq.nextval, #{uid}, #{username}, #{module}, #{operation}, #{changeData}, SYSTIMESTAMP, SYSTIMESTAMP)
     </insert>
 
-    <select id="queryLogs" parameterType="com.demeter.module.oplog.OplogService.QueryRequest" resultType="com.demeter.module.oplog.Oplog">
+    <select id="queryLogs" parameterType="map" resultType="com.demeter.models.oplog.Oplog">
         select * from operation_log
         <where>
             <if test="uid != null and uid > 0">
